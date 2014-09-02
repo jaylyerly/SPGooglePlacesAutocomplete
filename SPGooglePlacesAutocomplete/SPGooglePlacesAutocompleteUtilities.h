@@ -13,6 +13,7 @@
 typedef enum {
     SPPlaceTypeInvalid = -1,
     SPPlaceTypeGeocode = 0,
+    SPPlaceTypeSuburb,
     SPPlaceTypeEstablishment
 } SPGooglePlacesAutocompletePlaceType;
 
