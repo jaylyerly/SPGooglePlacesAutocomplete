@@ -26,10 +26,10 @@ SPGooglePlacesAutocompletePlaceType SPPlaceTypeFromDictionary(NSDictionary *plac
         
     }else if ([[placeDictionary objectForKey:@"types"] containsObject:@"(regions)"]){
         
-        return SPPlaceTypeSuburb;
+        return SPPlaceTypeRegion;
     }
     
-    return -1;
+    return SPPlaceTypeInvalid;
 }
 
 NSString *SPBooleanStringForBool(BOOL boolean) {
@@ -45,9 +45,13 @@ NSString *SPPlaceTypeStringForPlaceType(SPGooglePlacesAutocompletePlaceType type
         case SPPlaceTypeGeocode:
             return @"geocode";
             
-        case SPPlaceTypeSuburb:
+        case SPPlaceTypeRegion:
             return @"(regions)";
+            
+        case SPPlaceTypeInvalid:
+            return @"";
     }
+
 }
 
 extern BOOL SPIsEmptyString(NSString *string) {
