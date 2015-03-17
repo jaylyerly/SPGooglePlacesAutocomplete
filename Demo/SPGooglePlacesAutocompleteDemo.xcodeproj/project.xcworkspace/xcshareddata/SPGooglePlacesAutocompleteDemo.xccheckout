@@ -11,17 +11,17 @@
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>3BAC43AA9CAA0E6DDD799DA562082A4246A801B0</key>
-		<string>https://github.com/chrischentickbox/SPGooglePlacesAutocomplete.git</string>
+		<string>https://github.com/jaylyerly/SPGooglePlacesAutocomplete.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>Demo/SPGooglePlacesAutocompleteDemo.xcodeproj/project.xcworkspace</string>
+	<string>Demo/SPGooglePlacesAutocompleteDemo.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>3BAC43AA9CAA0E6DDD799DA562082A4246A801B0</key>
 		<string>../../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>https://github.com/chrischentickbox/SPGooglePlacesAutocomplete.git</string>
+	<string>https://github.com/jaylyerly/SPGooglePlacesAutocomplete.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>

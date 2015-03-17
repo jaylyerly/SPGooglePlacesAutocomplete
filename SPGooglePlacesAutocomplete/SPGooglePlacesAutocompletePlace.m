@@ -46,15 +46,15 @@
     query.reference = self.reference;
     [query fetchPlaceDetail:^(NSDictionary *placeDictionary, NSError *error) {
         if (error) {
-            block(nil, nil, error);
+            block(nil, nil, nil, error);
         } else {
             NSString *addressString = placeDictionary[@"formatted_address"];
             [[self geocoder] geocodeAddressString:addressString completionHandler:^(NSArray *placemarks, NSError *error) {
                 if (error) {
-                    block(nil, nil, error);
+                    block(nil, nil, nil, error);
                 } else {
                     CLPlacemark *placemark = [placemarks onlyObject];
-                    block(placemark, self.name, error);
+                    block(placemark, self.name, placeDictionary, error);
                 }
             }];
         }
@@ -64,10 +64,10 @@
 - (void)resolveGecodePlaceToPlacemark:(SPGooglePlacesPlacemarkResultBlock)block {
     [[self geocoder] geocodeAddressString:self.name completionHandler:^(NSArray *placemarks, NSError *error) {
         if (error) {
-            block(nil, nil, error);
+            block(nil, nil, nil, error);
         } else {
             CLPlacemark *placemark = [placemarks onlyObject];
-            block(placemark, self.name, error);
+            block(placemark, self.name, nil, error);
         }
     }];
 }
